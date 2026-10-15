@@ -1,0 +1,29 @@
+name: Motor Francotirador Bitvavo 24/7
+
+on:
+  schedule:
+    # Se despierta cada 30 minutos (en el minuto 1 y 31 de cada hora)
+    # Así captura los cierres de vela de 2h al instante y vigila el Trailing Stop de cerca
+    - cron: '1,31 * * * *'
+  workflow_dispatch: # Habilita el botón manual para probarlo cuando quieras
+
+jobs:
+  operar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Descargar el codigo del bot
+        uses: actions/checkout@v4
+
+      - name: 2. Encender Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 3. Instalar conexion a Bitvavo y motor matematico
+        run: pip install ccxt pandas
+
+      - name: 4. Ejecutar Bot Francotirador
+        env:
+          BITVAVO_API_KEY: ${{ secrets.BITVAVO_API_KEY }}
+          BITVAVO_SECRET_KEY: ${{ secrets.BITVAVO_SECRET_KEY }}
+        run: python bot.py
