@@ -1,0 +1,2 @@
+# bot-francotirador-
+Trading Bot
