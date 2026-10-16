@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '1,21,41 * * * *'
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   operar:
