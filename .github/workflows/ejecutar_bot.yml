@@ -1,10 +1,11 @@
 name: Motor Francotirador Bitvavo 24/7
 
 on:
+  push:
+    branches: [ main ]
   schedule:
     - cron: '1,21,41 * * * *'
   workflow_dispatch:
-  workflow_call:
 
 jobs:
   operar:
