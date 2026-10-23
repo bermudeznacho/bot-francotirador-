@@ -29,47 +29,65 @@ MINIMO_ORDEN_EUR = 5.5    # El mínimo de Bitvavo son 5.00 €, ponemos 5.50 €
 #   solo tienes que poner 'activo': True o añadir una línea igual a esta tabla.
 
 CONFIG_MONEDAS = {
+    # --- TUS 3 MONEDAS BASE ---
     'SOL/EUR': {
         'activo': True,
-        'donchian': 17,
-        'vol_mult': 1.5,
-        'atr_mult': 2.35,
-        'usar_adx': False,
-        'adx_min': 20
-    },
-    'ETH/EUR': {
-        'activo': True,
-        'donchian': 17,
-        'vol_mult': 1.5,
-        'atr_mult': 2.35,
-        'usar_adx': False,
-        'adx_min': 20
-    },
-    'SUI/EUR': {
-        'activo': True,
-        'donchian': 17,
-        'vol_mult': 1.5,
-        'atr_mult': 2.35,
-        'usar_adx': False,
-        'adx_min': 20
-    },
-    # --- PLANTILLAS MOTOR B (CON FILTRO ANTI-LATERAL ADX PARA BTC Y NUEVAS CRIPTOS) ---
-    'BTC/EUR': {
-        'activo': False,   # Cambia a True cuando ajustes sus parámetros óptimos en TradingView
-        'donchian': 25,
-        'vol_mult': 1.6,
-        'atr_mult': 2.20,
-        'usar_adx': True,  # Bloquea entradas si Bitcoin está en rango lateral
-        'adx_min': 22
-    },
-    'XRP/EUR': {
-        'activo': False,   # Cambia a True cuando quieras activarla
         'donchian': 20,
         'vol_mult': 1.5,
         'atr_mult': 2.35,
-        'usar_adx': True,
-        'adx_min': 20
-    }
+        'usar_adx': False,
+        'adx_min': 20,
+    },
+    'ETH/EUR': {
+        'activo': True,
+        'donchian': 20,
+        'vol_mult': 1.5,
+        'atr_mult': 2.35,
+        'usar_adx': False,
+        'adx_min': 20,
+    },
+    'SUI/EUR': {
+        'activo': True,
+        'donchian': 20,
+        'vol_mult': 1.5,
+        'atr_mult': 2.35,
+        'usar_adx': False,
+        'adx_min': 20,
+    },
+    
+    # --- TUS 4 NUEVAS CAMPEONAS TESTEADAS ---
+    'PEPE/EUR': {
+        'activo': True,
+        'donchian': 7,
+        'vol_mult': 2.3,
+        'atr_mult': 2.65,
+        'usar_adx': False,
+        'adx_min': 20,
+    },
+    'AAVE/EUR': {
+        'activo': True,
+        'donchian': 25,
+        'vol_mult': 1.5,
+        'atr_mult': 1.35,
+        'usar_adx': False,
+        'adx_min': 20,
+    },
+    'SEI/EUR': {
+        'activo': True,
+        'donchian': 7,
+        'vol_mult': 1.7,
+        'atr_mult': 2.60,
+        'usar_adx': False,
+        'adx_min': 20,
+    },
+    'STX/EUR': {
+        'activo': True,
+        'donchian': 22,
+        'vol_mult': 1.7,
+        'atr_mult': 1.85,
+        'usar_adx': False,
+        'adx_min': 20,
+    },
 }
 
 # =====================================================================
