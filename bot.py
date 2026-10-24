@@ -9,7 +9,7 @@ import urllib.request
 # =====================================================================
 # Pon esto en False después de recibir el primer mensaje para que no te 
 # bombardee cada 20 minutos.
-ENVIAR_SALUDO_INICIAL = True 
+ENVIAR_SALUDO_INICIAL = False 
 
 # =====================================================================
 # 1. NOTIFICACIONES TELEGRAM
